@@ -11,6 +11,3 @@ def insertion_sort(array:List[int])->List[int]:
         array[j+1] = _
     
     return array
-
-array = [5, 3, 8, 2]
-print(insertion_sort(array))
