@@ -10,15 +10,14 @@ def linear_search(array:List[int], target:int)->int:
 
 def binary_search(array:List[int], target:int)->int:
     low = 0
-    high = len(array)
+    high = len(array) - 1
 
-    while low < high:
-        count += 1
+    while low <= high:
         mid = math.floor((low + high)/2)
+        if array[mid] == target:
+            return mid
         if array[mid] < target:
             low = mid + 1
-        elif array[mid] > target:
-            high = mid
         else:
-            return mid, count
-    return -1, count
+            high = mid - 1
+    return -1
